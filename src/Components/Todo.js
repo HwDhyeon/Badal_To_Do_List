@@ -19,7 +19,7 @@ class Todo extends React.Component {
             target: { value }
         } = event;
 
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && event.target.value !== '') {
             this.setState(
                 state => ({ todoList: [...state.todoList, value] }),
                 () =>
